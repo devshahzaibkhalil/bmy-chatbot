@@ -23,8 +23,21 @@ def verify_password(plain_password, password_hash):
     return check_password_hash(password_hash, plain_password)
 
 
+# Static fallback superadmin - checked before any database lookup, so it
+# works even if the admin_users table is empty or the database resets
+# between deploys (e.g. no persistent disk attached on Render). Not tied to
+# any admin_users row/id - login state lives only in the Flask session.
+_STATIC_ADMIN_USERNAME = "admin"
+_STATIC_ADMIN_PASSWORD = "admin123@"
+_STATIC_ADMIN_USER = {
+    "id": "static-admin",
+    "username": _STATIC_ADMIN_USERNAME,
+    "role": "superadmin",
+}
 def attempt_login(username, password):
     """Returns the admin user dict on success, None on failure."""
+    if username == _STATIC_ADMIN_USERNAME and password == _STATIC_ADMIN_PASSWORD:
+        return _STATIC_ADMIN_USER
     user = db.get_admin_by_username(username)
     if not user:
         return None
