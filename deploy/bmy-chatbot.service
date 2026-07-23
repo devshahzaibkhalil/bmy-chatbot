@@ -1,0 +1,27 @@
+# deploy/bmy-chatbot.service
+# systemd unit for running BMY Marketer AI Assistant as a Linux service.
+#
+# Install:
+#   sudo cp deploy/bmy-chatbot.service /etc/systemd/system/
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now bmy-chatbot
+#
+# Edit WorkingDirectory/User/ExecStart paths to match your setup first.
+
+[Unit]
+Description=BMY Marketer AI Assistant
+After=network.target
+
+[Service]
+Type=simple
+User=bmychatbot
+WorkingDirectory=/opt/bmy-chatbot
+Environment="SECRET_KEY=CHANGE_ME"
+Environment="BMY_ENCRYPTION_KEY=CHANGE_ME"
+Environment="BMY_BLIND_INDEX_KEY=CHANGE_ME"
+ExecStart=/opt/bmy-chatbot/venv/bin/python /opt/bmy-chatbot/wsgi.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,29 @@
+Flask==3.0.3
+Flask-CORS==4.0.1
+fuzzywuzzy==0.18.0
+python-Levenshtein==0.25.1
+PyPDF2==3.0.1
+SpeechRecognition==3.10.4
+python-dotenv==1.0.1
+
+# Added Day 2 for the admin dashboard's export feature (CSV/Excel/PDF)
+openpyxl==3.1.5
+reportlab==4.2.5
+
+# Added Day 5 for PII encryption at rest
+cryptography==43.0.1
+
+# Optional Day 5 production WSGI server (Windows-friendly). Flask's dev
+# server (app.run) is fine for local testing but not for production.
+waitress==3.0.1
+
+# Optional Day 6 - only needed if you set BMY_REDIS_URL for multi-process
+# rate limiting. Uncomment to install:
+# redis==5.0.8
+
+# Added for validation/input_validator.py (live DNS MX lookup + phone validation)
+dnspython==2.6.1
+phonenumbers==8.13.43
+
+# Production WSGI server for Render deployment (Linux)
+gunicorn

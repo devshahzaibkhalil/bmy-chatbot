@@ -1,0 +1,126 @@
+{
+  "intro": "Happy to get you started! I'll ask a few quick questions so we can put together your proposal and invoice \u2014 shouldn't take more than a minute.",
+  "stages": [
+    {
+      "questions": [
+        {
+          "key": "service",
+          "prompt": "What service are you interested in?",
+          "options": [
+            { "label": "Web Development", "icon": "wrench" },
+            { "label": "Search Engine Optimization (SEO)", "icon": "search" },
+            { "label": "AI Visibility Optimization (AIO, AEO & GEO)", "icon": "sparkles" },
+            { "label": "Graphic Design", "icon": "palette" },
+            { "label": "Video Editing", "icon": "clapperboard" },
+            { "label": "Social Media Marketing", "icon": "smartphone" },
+            { "label": "Email Marketing", "icon": "mail" },
+            { "label": "Google Business Profile Optimization", "icon": "map-pin" },
+            { "label": "HappyAssist AI Answering Service", "icon": "bot" },
+            { "label": "Not sure yet", "icon": "help-circle" }
+          ]
+        },
+        {
+          "key": "goal",
+          "prompt": "What is your primary goal?",
+          "options": [
+            { "label": "Generate more leads", "icon": "target" },
+            { "label": "Increase website traffic", "icon": "trending-up" },
+            { "label": "Improve search visibility", "icon": "search" },
+            { "label": "Grow brand awareness", "icon": "megaphone" },
+            { "label": "Increase sales", "icon": "dollar-sign" },
+            { "label": "Something else", "icon": "help-circle" }
+          ]
+        },
+        {
+          "key": "website",
+          "prompt": "Do you currently have a business website?",
+          "options": [
+            { "label": "Yes", "icon": "check-square" },
+            { "label": "No", "icon": "x-square" }
+          ]
+        },
+        { "key": "location", "prompt": "Which city, state, or country does your business primarily serve?" }
+      ]
+    },
+    {
+      "questions": [
+        { "key": "biggest_issue", "prompt": "What is the biggest challenge you're facing?" },
+        {
+          "key": "start_timing",
+          "prompt": "When are you looking to begin this project?",
+          "options": [
+            { "label": "Immediately", "icon": "zap" },
+            { "label": "Within 1 month", "icon": "calendar" },
+            { "label": "Within 3 months", "icon": "calendar-days" },
+            { "label": "Just exploring options", "icon": "search" }
+          ]
+        },
+        {
+          "key": "budget_range",
+          "prompt": "What budget range have you allocated?",
+          "options": [
+            { "label": "Under $1,000", "icon": "dollar-sign" },
+            { "label": "$1,000 - $3,000", "icon": "dollar-sign" },
+            { "label": "$3,000 - $10,000", "icon": "money-bag" },
+            { "label": "$10,000+", "icon": "money-bag" },
+            { "label": "Not sure yet", "icon": "help-circle" }
+          ]
+        },
+        {
+          "key": "decision_maker",
+          "prompt": "Are you the person making the final decision?",
+          "options": [
+            { "label": "Yes", "icon": "check-square" },
+            { "label": "No, someone else is involved too", "icon": "users" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Contact stage",
+      "questions": [
+        { "key": "full_name", "prompt": "What's your full name?" },
+        { "key": "business_name", "prompt": "What's your business name?" },
+        { "key": "email", "prompt": "What's the best email address to reach you?" },
+        { "key": "phone", "prompt": "What's your phone number?" },
+        {
+          "key": "contact_method",
+          "prompt": "What's your preferred contact method?",
+          "options": [
+            { "label": "Email", "icon": "mail" },
+            { "label": "Phone", "icon": "phone" }
+          ]
+        },
+        {
+          "key": "best_day",
+          "prompt": "What's the best day to reach you?",
+          "options": [
+            { "label": "Monday", "icon": "calendar" },
+            { "label": "Tuesday", "icon": "calendar" },
+            { "label": "Wednesday", "icon": "calendar" },
+            { "label": "Thursday", "icon": "calendar" },
+            { "label": "Friday", "icon": "calendar" },
+            { "label": "Saturday", "icon": "calendar" }
+          ]
+        },
+        {
+          "key": "best_time",
+          "prompt": "What's the best time to reach you?",
+          "options": [
+            { "label": "Morning: 9:00 AM – 12:00 PM", "icon": "clock" },
+            { "label": "Afternoon: 12:00 PM – 5:00 PM", "icon": "clock" },
+            { "label": "Evening: 5:00 PM – 6:00 PM", "icon": "clock" }
+          ]
+        },
+        {
+          "key": "permission",
+          "prompt": "Do we have your permission to contact you about this?",
+          "options": [
+            { "label": "Yes, please contact me", "icon": "check-square" },
+            { "label": "No, not yet", "icon": "x-square" }
+          ]
+        }
+      ]
+    }
+  ]
+}

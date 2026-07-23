@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMY Marketer AI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+
+  <!-- Chat widget -->
+  <div id="bmy-chat-widget">
+    <button id="bmy-chat-toggle" aria-label="Open chat">
+      <img class="bmy-chat-toggle-icon" src="{{ url_for('static', filename='images/bmy-logo-icon.png') }}" alt="" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'bmy-chat-toggle-icon',textContent:String.fromCodePoint(0x1F4AC)}))" />
+      <span id="bmy-chat-toggle-dot" class="bmy-hidden" aria-hidden="true"></span>
+    </button>
+
+    <div id="bmy-chat-notify" class="bmy-hidden" role="button" tabindex="0" aria-label="Open chat with BMyMarketer Assistant">
+      <button type="button" id="bmy-chat-notify-close" aria-label="Dismiss"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <span id="bmy-chat-notify-text">👋 Hi there! Need help with SEO, Websites, Google Ads, or Marketing?</span>
+      <div class="bmy-notify-services">
+        <button type="button" class="bmy-notify-service" data-prompt="I want to improve my Google rankings.">
+          <span class="bmy-notify-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span><span>SEO</span>
+        </button>
+        <button type="button" class="bmy-notify-service" data-prompt="I want to build or redesign a website.">
+          <span class="bmy-notify-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></svg></span><span>Websites</span>
+        </button>
+        <button type="button" class="bmy-notify-service" data-prompt="Tell me about Google or Meta ads.">
+          <span class="bmy-notify-service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M16 8a3 3 0 0 1 0 8"/><path d="M19 5a7 7 0 0 1 0 14"/></svg></span><span>Google Ads</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="bmy-chat-window" class="bmy-hidden">
+      <div class="bmy-chat-header">
+        <div class="bmy-chat-header-identity">
+          <div class="bmy-header-badge">
+            <img src="{{ url_for('static', filename='images/bmy-logo-icon.png') }}" alt="" onerror="this.style.display='none'" />
+          </div>
+          <div>
+            <strong>BMyMarketer Assistant</strong>
+            <div class="bmy-chat-status">Online</div>
+          </div>
+        </div>
+        <div class="bmy-chat-header-actions">
+          <button id="bmy-voice-toggle" type="button" aria-label="Toggle spoken replies" title="Read replies aloud" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></button>
+          <button id="bmy-chat-close" aria-label="Close chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>
+      </div>
+
+      <!-- Welcome screen: shown first, replaced by the message thread on Start Chat / a quick action -->
+      <div id="bmy-welcome-screen">
+        <div class="bmy-aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+
+        <div class="bmy-welcome-content">
+          <div class="bmy-logo-badge">
+            <img src="{{ url_for('static', filename='images/bmy-logo-full.png') }}" alt="BMyMarketer" onerror="this.replaceWith(Object.assign(document.createElement('strong'),{className:'bmy-logo-fallback-text',textContent:'BMyMarketer'}))" />
+          </div>
+
+          <p class="bmy-welcome-tagline">AI Assistant</p>
+
+          <p class="bmy-welcome-intro">
+            Hi there! I can help with services, pricing, portfolio questions,
+            or getting you connected with our team &mdash; day or night.
+          </p>
+
+          <div class="bmy-quick-actions">
+            <button type="button" class="bmy-quick-action" data-prompt="I want to get more leads for my business.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span><span class="bmy-quick-action-label">Get More Leads</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="I want to build or redesign a website.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94z"/></svg></span><span class="bmy-quick-action-label">Build or Redesign a Website</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="I want to improve my Google rankings.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></span><span class="bmy-quick-action-label">Improve Google Rankings</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="I want to improve my Google Maps ranking.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span class="bmy-quick-action-label">Improve Google Maps Ranking</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="Tell me about your social media management service.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></span><span class="bmy-quick-action-label">Social Media Management</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="Tell me about Google or Meta ads.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l4 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M16 8a3 3 0 0 1 0 8"/><path d="M19 5a7 7 0 0 1 0 14"/></svg></span><span class="bmy-quick-action-label">Google or Meta Ads</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="Tell me about your graphic design service.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22a10 10 0 1 1 0-20 8 8 0 0 1 8 8 4 4 0 0 1-4 4h-1a2 2 0 0 0-1 3.7A2 2 0 0 1 12 22z"/><circle cx="7.5" cy="10.5" r="1.1"/><circle cx="10.5" cy="7" r="1.1"/><circle cx="14.5" cy="7" r="1.1"/><circle cx="16.8" cy="10.5" r="1.1"/></svg></span><span class="bmy-quick-action-label">Graphic Design</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="Tell me about your video editing service.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 6L3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3z"/><path d="M6.2 5.3L7 8M12.4 3.4l.8 2.7"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><span class="bmy-quick-action-label">Video Editing</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="Tell me about AI-powered SEO.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg></span><span class="bmy-quick-action-label">AI-Powered SEO</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="What are your pricing plans?">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.2"/><path d="M6 12h.01M18 12h.01"/></svg></span><span class="bmy-quick-action-label">Request Pricing</span>
+            </button>
+            <button type="button" class="bmy-quick-action" data-prompt="I'd like to speak with a specialist.">
+              <span class="bmy-quick-action-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span><span class="bmy-quick-action-label">Speak With a Specialist</span>
+            </button>
+          </div>
+
+          <button type="button" id="bmy-start-chat">
+            Start Chat
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M3 8h10M8.5 3.5 13 8l-4.5 4.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+
+          <p class="bmy-welcome-footnote">Usually replies instantly</p>
+        </div>
+      </div>
+
+      <!-- Message thread: hidden until the welcome screen is dismissed -->
+      <div id="bmy-chat-body" class="bmy-hidden">
+        <div id="bmy-chat-messages" class="bmy-chat-messages"></div>
+
+        <div id="bmy-typing-indicator" class="bmy-typing bmy-hidden">
+          <span></span><span></span><span></span>
+        </div>
+
+        <form id="bmy-chat-form" class="bmy-chat-input-row">
+          <button type="button" id="bmy-chat-attach" aria-label="Attach a file" title="Attach a file"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.44 11.05L12.25 20.24a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg></button>
+          <input type="file" id="bmy-chat-file-input" accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg" hidden />
+          <button type="button" id="bmy-chat-mic" aria-label="Speak your message" title="Speak your message" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v4M8 23h8"/></svg></button>
+          <input
+            id="bmy-chat-input"
+            type="text"
+            placeholder="Type your message..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" id="bmy-chat-send" aria-label="Send message">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"/>
+              <polygon points="22 2 15 22 11 13 2 9 22 2" fill="#fff" fill-opacity="0.12"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/chatbot.js') }}"></script>
+</body>
+</html>

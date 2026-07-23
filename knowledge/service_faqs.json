@@ -1,0 +1,262 @@
+{
+  "lead_generation": {
+    "label": "Get More Leads",
+    "trigger_patterns": [
+      "get more leads", "generate more leads", "generate leads", "more leads",
+      "increase my leads", "increase leads", "boost my leads", "need more leads",
+      "want more leads", "leads for my business", "get more customers",
+      "get more clients", "more customers for my business",
+      "more clients for my business", "grow my business", "grow my customer base",
+      "increase my sales", "get more sales", "boost my sales", "more sales",
+      "more traffic", "increase my traffic", "grow my traffic"
+    ],
+    "description": "Generating more leads is exactly what we specialize in. Depending on your business, that usually comes from a mix of stronger search rankings, a higher-converting website, local visibility, and targeted paid campaigns.",
+    "benefits": [
+      "Search Engine Optimization (SEO) - rank higher so more people find you",
+      "Google Business Profile Optimization - show up in local search and maps",
+      "Website Development - a site built to convert visitors into leads",
+      "Google or Meta Ads - targeted campaigns that bring leads in fast"
+    ],
+    "faqs": [
+      { "q": "How can I generate more leads for my business?", "a": "To generate more leads through your Google Business Profile, optimize for local search visibility by fully completing your business details, uploading high-quality photos weekly, securing and responding to positive customer reviews, and actively publishing Google Updates (Posts) with strong call-to-action buttons." }
+    ]
+  },
+  "website_development": {
+    "label": "Build or Redesign a Website",
+    "trigger_patterns": [
+      "build or redesign a website", "build a website", "redesign my website",
+      "redesign a website", "new website", "website development",
+      "web development", "web design", "website design", "revamp my website",
+      "update my website", "need a website", "want a website"
+    ],
+    "description": "Custom website design and development including WordPress, e-commerce, front-end and back-end development, and mobile-friendly websites.",
+    "benefits": [
+      "Custom design built around your brand, not a generic template",
+      "Mobile-friendly, fast-loading pages that keep visitors engaged",
+      "SEO-friendly structure from day one so you're ready to rank",
+      "Ongoing maintenance and security options after launch"
+    ],
+    "faqs": [
+      { "q": "What is the difference between front-end and back-end web development?", "a": "Front-end development focuses on everything users see and interact with directly in their browser (HTML, CSS, JavaScript, React). Back-end development manages server-side logic, databases, authentication, and APIs (Node.js, Python, SQL, REST APIs)." },
+      { "q": "What are Core Web Vitals, and why do they matter?", "a": "Core Web Vitals are a set of metrics defined by Google to measure user experience: LCP (Largest Contentful Paint - loading performance), INP (Interaction to Next Paint - responsiveness), and CLS (Cumulative Layout Shift - visual stability). They directly influence search engine rankings and user retention." },
+      { "q": "What is the difference between responsive design and adaptive design?", "a": "Responsive design uses flexible fluid grids and media queries to continuously scale layout elements based on any screen size. Adaptive design uses static layouts designed for fixed device breakpoints (e.g., desktop, tablet, mobile) and serves the matching version." },
+      { "q": "What is the role of a Document Object Model (DOM) in web browsers?", "a": "The DOM is a programming interface that represents an HTML document as a logical tree structure. JavaScript uses the DOM to dynamically access, manipulate, add, or delete HTML elements and styles on a webpage in real time." },
+      { "q": "What is the difference between REST and GraphQL APIs?", "a": "REST APIs use fixed endpoints that return predefined data structures, which can lead to over-fetching or under-fetching data. GraphQL allows client applications to request only the specific fields they need through a single endpoint query, reducing payload sizes." },
+      { "q": "How does modern web caching work to speed up websites?", "a": "Caching stores copies of static assets (images, CSS, JS) in temporary storage locations - such as the user's browser cache or a Content Delivery Network (CDN) edge server - so subsequent visits load assets locally without making full server round-trips." },
+      { "q": "What is Progressive Web App (PWA) technology?", "a": "A PWA is a web application built with modern web APIs (like Service Workers) that gives users a native mobile app-like experience. It enables offline functionality, push notifications, fast loading, and can be installed directly onto a home screen without an app store." },
+      { "q": "What is the difference between SQL and NoSQL databases in web development?", "a": "SQL databases (PostgreSQL, MySQL) are relational, table-based, and enforce strict schema structures, making them ideal for complex queries and transactional consistency. NoSQL databases (MongoDB, DynamoDB) are document or key-value based, offer flexible schemas, and scale horizontally easily for unstructured data." },
+      { "q": "What are Semantic HTML tags, and why should developers use them?", "a": "Semantic tags (header, nav, article, footer) clearly describe the meaning and structure of content to both browsers and developer tools, improving web accessibility (screen readers) and search engine crawling accuracy." },
+      { "q": "How does HTTPS secure web communications compared to standard HTTP?", "a": "HTTPS encrypts data in transit between the user's browser and the web server using Transport Layer Security (TLS/SSL). This prevents eavesdropping, data tampering, and man-in-the-middle attacks that occur over unencrypted HTTP connections." }
+    ]
+  },
+  "seo": {
+    "label": "Improve Google Rankings",
+    "trigger_patterns": [
+      "improve my google ranking", "improve my google rankings",
+      "improve google ranking", "improve google rankings",
+      "improve my ranking", "improve my rankings",
+      "improve my search ranking", "improve my search rankings",
+      "rank higher on google", "rank higher in google",
+      "grow my organic traffic", "increase my organic traffic",
+      "increase organic traffic", "more organic traffic",
+      "seo services", "seo service", "help with seo", "need seo",
+      "want seo", "do seo", "seo package", "seo packages",
+      "seo help", "boost my seo", "search engine optimization",
+      "search engine optimisation"
+    ],
+    "description": "Full SEO services to improve search rankings and organic visibility - we help businesses improve Google rankings, increase organic traffic, and generate more qualified leads.",
+    "benefits": [
+      "Higher rankings on the search terms your customers actually use",
+      "Technical fixes so Google can crawl and index your site properly",
+      "Content and on-page optimization that targets real buyer intent",
+      "Ongoing reporting so you can see traffic and ranking gains over time"
+    ],
+    "faqs": [
+      { "q": "What is the difference between On-Page, Off-Page, and Technical SEO?", "a": "On-Page SEO optimizes page content, headings, meta tags, and internal linking. Off-Page SEO builds domain authority through external backlinks, social signals, and brand mentions. Technical SEO fixes site architecture, crawling/indexing issues, speed, and mobile usability." },
+      { "q": "What is Search Intent, and why is it critical for keyword targeting?", "a": "Search intent is the user's primary goal behind a query: Informational, Navigational, Commercial, or Transactional. Aligning your page content directly with what the user expects to find ensures high engagement, low bounce rates, and better search rankings." },
+      { "q": "What is the purpose of the robots.txt file and XML sitemap?", "a": "A robots.txt file tells search engine web crawlers which URLs or directories they are permitted or forbidden to crawl. An XML sitemap is a structured map listing all important site pages to help crawlers discover and index content efficiently." },
+      { "q": "What is Domain Authority (DA) / Rating (DR), and how is it earned?", "a": "DA/DR is a third-party metric (created by Moz/Ahrefs) that predicts a website's ranking potential based on its backlink profile. It is earned by securing high-quality, relevant backlinks from trusted external websites." },
+      { "q": "What is the function of a canonical tag (rel=\"canonical\")?", "a": "A canonical tag tells search engines which URL is the master or authoritative version of a page. This prevents duplicate content issues when identical or similar content is accessible across multiple web addresses." },
+      { "q": "What is E-E-A-T in Google's Search Quality Rater Guidelines?", "a": "E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness. It is the conceptual framework Google uses to evaluate whether content creators provide accurate, first-hand, high-quality information (especially critical for health/financial YMYL content)." },
+      { "q": "How do internal links support search optimization?", "a": "Internal links establish site hierarchy, distribute link equity (ranking power) across internal pages, help search engine bots discover new content, and guide users to related topics to increase session duration." },
+      { "q": "What are long-tail keywords, and why are they valuable for new websites?", "a": "Long-tail keywords are longer, highly specific search phrases (e.g., \"best budget wireless earbuds for running\"). They have lower search volume than broad terms, but carry much higher conversion intent and lower ranking competition." },
+      { "q": "What is a 301 redirect, and when should it be used?", "a": "A 301 redirect is a permanent HTTP status code redirect. It routes site visitors and search engines from an old URL to a new one while transferring 90-99% of the original page's ranking authority and backlink value." },
+      { "q": "What is Keyword Cannibalization, and how do you fix it?", "a": "Keyword cannibalization happens when multiple pages on your website target the exact same keyword, causing them to compete against each other in search results. It is fixed by merging similar pages, updating canonical tags, or re-targeting pages to unique intent variations." }
+    ]
+  },
+  "ai_powered_seo": {
+    "label": "AI-Powered SEO",
+    "trigger_patterns": [
+      "ai powered seo", "ai-powered seo", "ai visibility", "ai optimization",
+      "answer engine optimization", "generative engine optimization",
+      "aio", "aeo", "geo optimization", "show up in chatgpt",
+      "show up in ai search", "ai search visibility"
+    ],
+    "description": "AI-powered visibility services that help your business get understood, trusted and referenced by AI systems like ChatGPT, Gemini and Google AI Overviews - covering AI Optimization (AIO), Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO).",
+    "benefits": [
+      "Get cited and recommended by AI assistants like ChatGPT and Gemini",
+      "Show up in Google AI Overviews, not just traditional blue links",
+      "Structured, trustworthy content that AI models prefer to reference",
+      "Stay ahead as search shifts from keywords to AI-generated answers"
+    ],
+    "faqs": [
+      { "q": "What are AEO, AIO, and GEO, and how do they differ from traditional SEO?", "a": "Traditional SEO focuses on ranking web pages on search engine result pages (SERPs) for specific keywords to drive organic click-through traffic. AEO (Answer Engine Optimization) optimizes content to be selected as the direct single answer for voice assistants (Alexa, Siri) and featured snippets. AIO (AI Overviews Optimization) focuses on getting cited or included within AI-generated snapshots displayed at the top of traditional search platforms like Google. GEO (Generative Engine Optimization) optimizes content to be synthesized, cited, and referenced by standalone AI tools and conversational platforms like ChatGPT, Gemini, and Perplexity." },
+      { "q": "Why is \"Zero-Click Search\" driving the shift toward AEO and GEO?", "a": "Zero-click searches occur when a user gets their full answer directly on the search engine results page or AI prompt without having to click on any external website links. As users increasingly prefer quick, direct answers from AI, digital strategy must shift from just measuring \"click-through rates\" to measuring citations, brand impressions, and share of AI voice." },
+      { "q": "What is \"BLUF\" (Bottom Line Up Front), and why is it crucial for AEO?", "a": "BLUF is a content design technique where you state the direct, concise answer (usually 40-60 words) immediately after a question heading, followed by detailed context or bullet points. Answer engines and AI models prioritize BLUF formatting because it allows their scrapers to instantly extract a clean answer snippet without parsing unnecessary fluff." },
+      { "q": "How does Schema Markup (Structured Data) improve AI visibility?", "a": "Schema markup (such as FAQPage, HowTo, Article, and Speakable schema) acts as a standardized machine-readable layer on top of human-readable text. It helps AI crawlers explicitly understand entities, context, relationships, and question-and-answer pairings, significantly increasing the probability that an AI model will trust and cite the content." },
+      { "q": "What are LLM Citations, and how do AI engines decide which source to cite?", "a": "An LLM citation is when an AI engine (like Perplexity or Google AI Overviews) provides a direct footnote or hyperlink referencing your website as the source of a claim or facts. AI engines evaluate factors like topical authority (comprehensive, consistent coverage of a subject across a domain), factual and statistical density (clear data points and original research), content recency (frequently updated, timely information), and E-E-A-T (clear author bios, credentials, and third-party brand mentions)." },
+      { "q": "What technical barriers can block AI crawlers from indexing a site for GEO?", "a": "Common barriers include robots.txt or CDN blocks (settings or security setups like Cloudflare's default AI protection that actively block user-agents like ChatGPT-User or PerplexityBot), JavaScript client-side rendering (AI crawlers process raw HTML server responses, so if key text requires client-side JavaScript execution, the crawler won't read it), and hidden content locked behind tabs, accordions, logins, or paywalls that crawlers cannot inspect." },
+      { "q": "How does query length and structure differ between Traditional Search and AI Search?", "a": "Traditional search queries are short and keyword-centric, averaging 2-4 words (e.g. \"best video editing software\"). AEO/GEO search queries are long, conversational, complex, full-sentence prompts, averaging 15-25 words (e.g. \"What is the best video editing software for a beginner using a low-end laptop to edit 4K video?\")." },
+      { "q": "What is \"Prompt-Led Publishing\" in modern content strategy?", "a": "Prompt-led publishing is the practice of designing articles and guides based on real user prompts and \"fan-out\" queries rather than just target keyword volume. Content creators analyze how AI engines break down broad user prompts into multi-step sub-questions and structure their articles with dedicated subheadings to answer each sub-question directly." },
+      { "q": "What key formatting techniques make content easiest for AI models to extract?", "a": "The most effective techniques are a clear visual hierarchy with logical H1, H2, and H3 tags; short, focused paragraphs (2-3 sentences max); scannable bullet points and numbered step lists; comparison tables (which LLMs parse easily for structured data comparison); and explicit Q&A sections or FAQ blocks." },
+      { "q": "How can brands measure their success in GEO and AEO if website clicks decrease?", "a": "Because AI answers often solve queries on-page without a click, traditional web analytics like total session traffic are insufficient. Success is measured through Share of Model Voice (how frequently an AI model mentions your brand vs. competitors on broad industry prompts), referral traffic from AI domains (like chatgpt.com or perplexity.ai), and impression share in Google Search Console (tracking high-impression, low-click queries that indicate inclusion in AI Overviews)." }
+    ]
+  },
+  "graphic_design": {
+    "label": "Graphic Design",
+    "trigger_patterns": [
+      "graphic design", "logo design", "brand identity", "need a logo",
+      "want a logo", "design a logo", "branding", "business card design",
+      "flyer design", "brochure design", "banner design", "ui/ux",
+      "ui ux", "uiux"
+    ],
+    "description": "Creative design services covering UI/UX, branding, and marketing collateral.",
+    "benefits": [
+      "A cohesive, professional look across your logo, brand, and marketing materials",
+      "Designs built around proven principles - hierarchy, contrast, and readability",
+      "Print-ready and web-ready files delivered in the formats you need",
+      "A reusable design system so future materials stay consistent"
+    ],
+    "faqs": [
+      { "q": "What are the primary principles of visual hierarchy in graphic design?", "a": "Visual hierarchy organizes design elements by order of importance using scale/size, color contrast, typographic weight, spatial positioning, white space, and visual focal points to lead the viewer's eyes through a composition naturally." },
+      { "q": "What is the difference between RGB and CMYK color spaces?", "a": "RGB (Red, Green, Blue) is an additive color model designed for digital screens, using light to create vibrant colors. CMYK (Cyan, Magenta, Yellow, Key/Black) is a subtractive color model designed for physical print materials, relying on physical ink absorption." },
+      { "q": "What is the difference between kerning, tracking, and leading in typography?", "a": "Kerning adjusts the space between two specific individual letters. Tracking adjusts the uniform spacing across an entire word or block of text. Leading adjusts the vertical line spacing between lines of text." },
+      { "q": "What is negative space (white space) and why is it essential?", "a": "Negative space is the empty area surrounding design elements. It prevents visual clutter, improves text legibility, creates visual balance, and directs user attention toward focal points." },
+      { "q": "What is the difference between Serif and Sans-Serif fonts, and where are they typically used?", "a": "Serif fonts feature small decorative strokes (\"feet\") at the ends of character stems (e.g., Times New Roman), often used in traditional print, editorial publications, and luxury branding. Sans-Serif fonts lack these strokes (e.g., Helvetica, Inter), offering clean, modern readability on digital screens." },
+      { "q": "What is the Rule of Thirds in visual composition?", "a": "The Rule of Thirds divides an image or canvas into a 3x3 grid using two horizontal and two vertical lines. Placing key visual elements along these lines or at their intersections creates a more dynamic, balanced composition than centering everything." },
+      { "q": "What is a design system, and how does it help brand scaling?", "a": "A design system is a centralized library of reusable design components, UI guidelines, color palettes, typography specs, and brand rules. It ensures design consistency across platforms and speeds up workflow between designers and developers." },
+      { "q": "What is contrast ratio, and why is it important in UI design?", "a": "Contrast ratio measures the difference in visual brightness between text/icons and their background color. Maintaining a high contrast ratio (such as WCAG AA minimum 4.5:1) ensures readable text for visually impaired or colorblind users." },
+      { "q": "What is the purpose of wireframing versus prototyping in graphic/UI design?", "a": "Wireframing creates simple, low-fidelity structural blueprints focused on layout, content placement, and user flow without styling. Prototyping adds high-fidelity visual design, interactive buttons, animations, and transitions to simulate the actual product experience." },
+      { "q": "What is the difference between lossless and lossy image compression formats?", "a": "Lossless compression (PNG, SVG) reduces file sizes without discarding any visual data, maintaining high quality. Lossy compression (JPG, WebP) drops non-essential image data to achieve much smaller file sizes, slightly degrading image detail." }
+    ]
+  },
+  "video_editing": {
+    "label": "Video Editing",
+    "trigger_patterns": [
+      "video editing", "edit my video", "edit a video", "video production",
+      "motion graphics", "need a video edited", "video content"
+    ],
+    "description": "Professional video editing and motion graphics for brands and social media.",
+    "benefits": [
+      "Polished, on-brand videos cut for the platform they'll run on",
+      "Color correction and grading for a consistent, professional look",
+      "Sound design and music that keeps viewers watching",
+      "Fast turnaround so your content calendar stays on schedule"
+    ],
+    "faqs": [
+      { "q": "What is non-linear editing (NLE), and how does it differ from linear editing?", "a": "Non-linear editing (NLE) allows an editor to access, cut, re-arrange, and modify any frame of digital video at any point in the timeline without altering the original source files (non-destructive editing). Modern software like Adobe Premiere Pro, DaVinci Resolve, and Final Cut Pro are all NLEs. In contrast, traditional linear editing required copying footage sequentially from tape to tape; if an edit was made early in the sequence, everything after it had to be re-recorded." },
+      { "q": "What is the difference between Color Correction and Color Grading?", "a": "Color Correction is the initial technical step aimed at making footage look natural and consistent - adjusting white balance, exposure, brightness, and contrast so all clips across different cameras look uniform. Color Grading is the artistic process applied after correction to create a stylistic look, mood, or atmosphere for the scene (e.g., cool blue tones for a thriller or warm golden tones for a nostalgic scene)." },
+      { "q": "What are J-Cuts and L-Cuts, and why are they used?", "a": "J-cuts and L-cuts are split edit techniques used to make transitions between scenes feel smooth and natural. In a J-Cut, the audio from the upcoming clip begins before the video transitions. In an L-Cut, the audio from the current clip continues playing over the visual of the next scene. Both prevent abrupt \"hard cuts\" where audio and video change simultaneously, creating a more seamless narrative flow." },
+      { "q": "What is the 180-Degree Rule in video editing and filming?", "a": "The 180-degree rule is an imaginary line (axis of action) drawn between two interacting characters in a scene. By keeping the camera on one side of this axis, the spatial relationship between characters is preserved, ensuring character A stays on the left side of the screen and character B stays on the right. Crossing this line causes spatial disorientation for the viewer unless an intentional camera movement or intermediate shot is used to re-establish the axis." },
+      { "q": "What are Proxy Files, and why are they used in a professional workflow?", "a": "Proxy files are lower-resolution, smaller copies of raw, high-resolution camera footage (e.g., 4K, 8K, or RAW formats). Editors use proxies during the editing process to allow smooth timeline playback without overloading the computer's CPU or GPU. Before exporting or doing final color grading, the editor switches back (relinks) to the full-resolution original files to render the final product." },
+      { "q": "What is the difference between a Rough Cut, Fine Cut, and Picture Lock?", "a": "A Rough Cut is the first complete assembly of the video, focused on getting the story, structure, and basic pacing right. A Fine Cut is a refined version where timing, individual frame cuts, transitions, and audio sync are tightly polished. Picture Lock is the stage where visual editing is finalized and frozen, allowing sound designers, colorists, and VFX artists to work on their deliverables without sync issues." },
+      { "q": "What is Chroma Keying, and how do you achieve a clean key?", "a": "Chroma keying (green screening) is the process of removing a specific color background (usually bright green or blue) from a video layer to make it transparent, allowing a new background to be placed behind the subject. A clean key needs proper flat, even lighting on the screen, distance between the subject and the screen to avoid green light spill, and dedicated keying software (like Ultra Key in Premiere Pro or Primatte Keyer in After Effects) for matte cleanup and spill suppression." },
+      { "q": "What are Keyframes, and how are they applied in editing?", "a": "Keyframes are markers set on a timeline that define the starting and ending parameters of an animation or automated effect over time. By placing two keyframes with different values, the software automatically interpolates the transition between them. Keyframes are used to animate properties like scale (zooming), position (panning), opacity (fading), volume levels, or effect intensity." },
+      { "q": "What is the role of Audio Mixing and Sound Design in video editing?", "a": "Sound accounts for at least 50% of the viewer experience. Audio editing involves dialogue cleanup (removing background noise and harsh frequencies), level balancing (keeping dialogue clear, typically peaking between -6dB and -12dB, while music and SFX stay balanced underneath), and audio panning and room tone for spatial depth and seamless fills between dialogue lines." },
+      { "q": "What is a Codec vs. a Container (File Format)?", "a": "A Codec (Coder-Decoder) is the method/algorithm used to compress and decompress video and audio data (e.g., H.264, H.265/HEVC, ProRes, DNxHR), which determines file size, editing performance, and visual quality. A Container is the wrapper file format that holds the video track, audio track, subtitles, and metadata together (e.g., .mp4, .mov, .mkv, .avi). For example, an .mp4 file (container) might use the H.264 codec for video and AAC for audio." }
+    ]
+  },
+  "social_media_management": {
+    "label": "Social Media Management",
+    "trigger_patterns": [
+      "social media management", "social media marketing", "manage my social media",
+      "social media service", "social media services", "run my social media",
+      "social media help", "social media ads", "instagram management",
+      "facebook management"
+    ],
+    "description": "Full social media management and paid advertising to grow brand engagement.",
+    "benefits": [
+      "Consistent posting and community management across your platforms",
+      "Content built around what actually performs for your industry",
+      "Paid social campaigns tested and optimized for the best return",
+      "Monthly reporting so you can see engagement and growth over time"
+    ],
+    "faqs": [
+      { "q": "What is Community Management in social media?", "a": "Community management is the practice of actively monitoring, replying to, and starting conversations with audience members in post comments, direct messages, and brand mentions to build long-term brand loyalty." },
+      { "q": "What is A/B testing (split testing) in social media ad campaigns?", "a": "A/B testing compares two versions of an ad (testing one variable at a time, such as creative visual, copy headline, CTA button, or audience targeting) to identify which variation yields the lowest Cost Per Click or highest conversion rate." }
+    ]
+  },
+  "google_business_profile": {
+    "label": "Improve Google Maps Ranking",
+    "trigger_patterns": [
+      "improve my google maps ranking", "improve google maps ranking",
+      "google maps ranking", "google business profile", "google my business",
+      "gbp optimization", "gmb optimization", "local seo", "show up on google maps",
+      "local search ranking"
+    ],
+    "description": "Our Google Business Profile optimization service helps improve local visibility, map rankings, customer engagement and profile performance.",
+    "benefits": [
+      "Show up higher in the local Map Pack for searches near you",
+      "A fully optimized profile - photos, categories, services, and posts",
+      "More calls, direction requests, and website clicks from your listing",
+      "Review management to build trust and improve your local ranking"
+    ],
+    "faqs": [
+      { "q": "How do I verify my Google Business Profile?", "a": "Google sends a verification code via postcard, phone, email, or video recording." },
+      { "q": "Does it cost money to list a business on Google Maps?", "a": "No, creating and managing a Google Business Profile is completely free." },
+      { "q": "How do I rank higher on Google Maps local search?", "a": "Complete all profile details, collect positive reviews, and keep your hours updated." },
+      { "q": "Can I create a profile if I run a business from home?", "a": "Yes, you can hide your address and select a \"Service Area\" instead." },
+      { "q": "Why did my Google Business Profile get suspended?", "a": "Suspensions usually happen due to policy violations, like using a fake address or stuffing keywords into your business name." },
+      { "q": "Can I delete a negative Google review left by a customer?", "a": "No, you can only flag it for removal if it violates Google's terms." },
+      { "q": "How do I manage multiple locations under one business?", "a": "You can create a location group within your single dashboard to manage them together." },
+      { "q": "What should I do if my verification postcard never arrives?", "a": "Wait 14 days, then request a new code or contact Google support for alternative options." },
+      { "q": "How do I fix a duplicate listing for my business on Maps?", "a": "Log into your dashboard, click on the duplicate location, and select \"Remove listing\" or report it on Maps as a duplicate." },
+      { "q": "Can customers message my business directly through Google Maps?", "a": "Yes, you must turn on the \"Messaging\" feature inside your profile console." }
+    ]
+  },
+  "performance_marketing": {
+    "label": "Google or Meta Ads",
+    "trigger_patterns": [
+      "google or meta ads", "google ads", "meta ads", "facebook ads",
+      "instagram ads", "paid ads", "performance marketing", "ppc",
+      "run ads", "run paid ads", "advertising campaign"
+    ],
+    "description": "Targeted Google and Meta (Facebook & Instagram) ad campaigns that put your business in front of the right audience and turn clicks into leads.",
+    "benefits": [
+      "Campaigns built around your actual budget and goals, not guesswork",
+      "Precise audience targeting so ad spend reaches the right people",
+      "Ongoing testing and optimization to lower cost per lead over time",
+      "Clear reporting on spend, clicks, and results"
+    ],
+    "faqs": [
+      { "q": "How does Google Ads bidding work?", "a": "You set a maximum budget and pay only when someone clicks your ad through an automated auction system." },
+      { "q": "What is a good Quality Score and how do I improve it?", "a": "A score of 7 or higher is good; improve it by matching keywords to relevant ad copy and landing pages." },
+      { "q": "Why are my Google Ads getting impressions but no clicks?", "a": "Your ads may be targeting the wrong audience, or your ad headline is not enticing enough to click." },
+      { "q": "What is the difference between Search Ads and Performance Max campaigns?", "a": "Search Ads target specific text keywords, while Performance Max automatically displays ads across all Google platforms using AI." }
+    ]
+  },
+  "email_marketing": {
+    "label": "Email Marketing",
+    "trigger_patterns": [
+      "email marketing", "email campaign", "email campaigns", "email automation",
+      "newsletter", "email list", "email blast"
+    ],
+    "description": "Email campaigns, automation, and list building to nurture leads and customers.",
+    "benefits": [
+      "Automated sequences that nurture leads without manual follow-up",
+      "Segmented lists so the right message reaches the right subscriber",
+      "Designed templates that stay on-brand and look good on any device",
+      "Open, click, and conversion tracking on every campaign"
+    ],
+    "faqs": [
+      { "q": "What are SPF, DKIM, and DMARC, and why are they essential for email marketing?", "a": "These three email authentication protocols verify your sending domain identity and protect your brand against spoofing and phishing. SPF (Sender Policy Framework) specifies which IP addresses and servers are authorized to send email on behalf of your domain. DKIM (DomainKeys Identified Mail) adds a cryptographic signature to outgoing emails to prove the message wasn't altered in transit. DMARC (Domain-based Message Authentication, Reporting, and Conformance) uses SPF and DKIM to tell receiving inbox providers how to handle emails that fail authentication (e.g., monitor, quarantine, or reject)." },
+      { "q": "What is the difference between Single Opt-In and Double Opt-In?", "a": "Single Opt-In (SOI) means a subscriber submits their email address on a form and is immediately added to the mailing list without further verification - it yields higher initial conversion rates but can lead to invalid or mistyped email addresses. Double Opt-In (DOI) means the subscriber receives a confirmation email with a link they must click to verify their intent after signing up, which builds a higher-quality, more engaged email list with lower bounce rates and fewer spam complaints." },
+      { "q": "What is a Hard Bounce vs. a Soft Bounce?", "a": "A Hard Bounce is a permanent delivery failure caused by an invalid, non-existent, or blocked email address/domain - hard-bounced emails should be permanently removed from your list immediately to protect domain reputation. A Soft Bounce is a temporary delivery failure caused by a full recipient inbox, server downtime, or an oversized message file; email service providers usually retry sending soft-bounced emails multiple times before converting them to a hard bounce." },
+      { "q": "What are Email Automations (Drip Campaigns) vs. Broadcast Emails?", "a": "Broadcast Emails are one-time, real-time emails sent to a specific list segment at a scheduled time (e.g., weekly newsletters, holiday sales, product launch announcements). Email Automations (Drip Sequences) are pre-written, event-driven emails triggered automatically by specific subscriber behaviors or timeline events (e.g., welcome series upon sign-up, abandoned cart reminders, post-purchase follow-ups)." },
+      { "q": "What is Segmentation, and why is it critical for campaign success?", "a": "Segmentation is the process of dividing an email list into smaller, targeted sub-groups based on shared characteristics such as demographics, geographical location, purchase history, website activity, or engagement level. Sending relevant, targeted content to specific segments dramatically improves open rates, click-through rates, and conversions while reducing unsubscribes compared to \"batch-and-blast\" broadcasts." },
+      { "q": "What is an Abandoned Cart Email Sequence, and what makes it effective?", "a": "An abandoned cart sequence is a series of automated emails sent to online shoppers who added items to their digital shopping cart but left the website before completing checkout. Key components of an effective sequence include: sending the first reminder within 1 to 4 hours of abandonment, displaying the exact items left behind, including a direct \"Return to Cart\" deep-link to reduce friction, and adding social proof or incentives like customer reviews or limited-time free shipping/discount offers in follow-up messages." },
+      { "q": "How do Apple's Mail Privacy Protection (MPP) and privacy changes impact email marketing?", "a": "Apple's Mail Privacy Protection (MPP) pre-loads email content - including tracking pixels - on proxy servers regardless of whether a user opens the email. This inflates reported Open Rates, making them an unreliable standalone success metric. Marketers now rely more heavily on downstream engagement metrics like Click-Through Rates (CTR), Conversion Rates, List Growth, and Revenue Per Email (RPE)." },
+      { "q": "What are best practices for optimizing emails for mobile devices?", "a": "Since over half of all emails are opened on mobile devices, optimization requires single-column layouts (ensuring text and visual assets stack neatly without horizontal scrolling) and short subject lines and preheaders (keeping subject lines under 40 characters so they don't get cut off on mobile screens)." }
+    ]
+  }
+}

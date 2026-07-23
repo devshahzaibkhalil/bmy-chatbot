@@ -1,0 +1,359 @@
+{
+  "company": {
+    "name": "BMyMarketer",
+    "tagline": "The Leading Digital Marketing Agency",
+    "description": "BMyMarketer is a full-service digital marketing agency in the USA delivering results-driven, data-driven digital marketing strategies for brands of all sizes. Recognized among the top B2B digital marketing agencies in Chicago, IL.",
+    "website": "https://bmymarketer.com/",
+    "stats": {
+      "projects_completed": "550+",
+      "projects_done": "4k+",
+      "happy_clients": "3k+",
+      "client_rating": "4.7",
+      "awards": "35+"
+    },
+    "why_choose_us": [
+      "Experienced, skilled marketing teams",
+      "Honest and transparent communication",
+      "Scalable strategies built for growth",
+      "Data driven decision making",
+      "Clear, measurable performance metrics",
+      "Proven track record of results",
+      "Collaborative, partnership first approach",
+      "Client centric, fully personalized services",
+      "24/7 support & ongoing maintenance"
+    ]
+  },
+  "contact": {
+    "phone": "(210) 903-5954",
+    "phone_tel": "+12109035954",
+    "email": "info@bmymarketer.com",
+    "office_hours": "Monday - Friday, 09:00 AM - 06:00 PM",
+    "offices": {
+      "US": "4553 N Magnolia Ave, APT 202, Chicago, IL, 60640, United States",
+      "UK": "Manor Park Business Centre, Office 5, 736-740 Romford Road, London, E12 6BT"
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/BMyMarketer",
+      "instagram": "https://www.instagram.com/bmymarketer/",
+      "linkedin": "https://www.linkedin.com/company/bmymarketer/"
+    },
+    "contact_page": "https://bmymarketer.com/contact/"
+  },
+  "services": [
+    {
+      "name": "Web Development",
+      "url": "https://bmymarketer.com/web-development/",
+      "description": "Custom website design and development including WordPress, e-commerce, front-end and back-end development, and mobile-friendly websites.",
+      "sub_services": [
+        "WordPress Development",
+        "E-commerce Solutions (Shopify Development, E-commerce Website Development, E-commerce Marketing)",
+        "Front-End Development",
+        "Back-End Development",
+        "Custom Website Designing",
+        "Mobile Friendly Websites"
+      ]
+    },
+    {
+      "name": "Search Engine Optimization (SEO)",
+      "url": "https://bmymarketer.com/search-engine-optimization-seo/",
+      "description": "Full SEO services to improve search rankings and organic visibility.",
+      "sub_services": [
+        "On-Page SEO",
+        "Off-Page SEO",
+        "Technical SEO",
+        "Local SEO"
+      ]
+    },
+    {
+      "name": "AI Visibility Optimization (AIO, AEO & GEO)",
+      "url": "https://bmymarketer.com/services/",
+      "description": "AI-powered visibility services that help your business get understood, trusted and referenced by AI systems like ChatGPT, Gemini and Google AI Overviews - covering AI Optimization (AIO), Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO).",
+      "sub_services": [
+        "AI Optimization (AIO)",
+        "Answer Engine Optimization (AEO)",
+        "Generative Engine Optimization (GEO)",
+        "AI Visibility Audit"
+      ]
+    },
+    {
+      "name": "Graphic Design",
+      "url": "https://bmymarketer.com/graphic-design/",
+      "description": "Creative design services covering UI/UX, branding, and marketing collateral.",
+      "sub_services": [
+        "UI/UX Design (Figma, Adobe XD, Webflow)",
+        "Custom Logo Design",
+        "Business Card Design",
+        "Social Media Cover Design",
+        "Presentation Design"
+      ]
+    },
+    {
+      "name": "Video Editing",
+      "url": "https://bmymarketer.com/video-editing/",
+      "description": "Professional video editing and motion graphics for brands and social media.",
+      "sub_services": [
+        "Advanced Video Editing",
+        "Motion Graphics and Animation",
+        "Sound Editing and Mixing",
+        "Social Media and YouTube Video Optimization"
+      ]
+    },
+    {
+      "name": "Social Media Marketing",
+      "url": "https://bmymarketer.com/social-media-marketing/",
+      "description": "Full social media management and paid advertising to grow brand engagement.",
+      "sub_services": [
+        "Social Media Management",
+        "Social Media Advertising"
+      ]
+    },
+    {
+      "name": "Email Marketing",
+      "url": "https://bmymarketer.com/email-marketing/",
+      "description": "Email campaigns, automation, and list building to nurture leads and customers.",
+      "sub_services": [
+        "Email Marketing Campaigns",
+        "Email Marketing Automation",
+        "Email Marketing List Building"
+      ]
+    },
+    {
+      "name": "Google Business Profile Optimization",
+      "url": "https://bmymarketer.com/google-business-profile-optimization/",
+      "description": "Our Google Business Profile optimization service helps improve local visibility, map rankings, customer engagement and profile performance.",
+      "sub_services": [
+        "GBP Setup",
+        "Local Visibility Optimization",
+        "Review and Reputation Management",
+        "Multi-Location Profile Management"
+      ]
+    },
+    {
+      "name": "HappyAssist AI Answering Service",
+      "url": "https://bmymarketer.com/ai-assistant/",
+      "description": "24/7 AI answering service that screens customers, captures job details, and schedules appointments, tailored to industries such as Accounting & Tax, Appliance Repair, Auto Repair, Biohazard Cleanup, Car Detailing, and Carpet Cleaning."
+    }
+  ],
+  "pricing": {
+    "note": "These are recommended starting prices, not final quotes. Final pricing depends on your goals, competition, number of pages or platforms, content requirements and project timeline.",
+    "disclaimer_rule": "Our packages start from $___, but the final price depends on your goals, competition, number of pages or platforms, content requirements and project timeline. I can ask a few questions and provide a more accurate estimate.",
+    "never_binding_quote": true,
+    "categories": {
+      "Website Development": [
+        {
+          "package": "Landing Page",
+          "price": "$499–$899",
+          "includes": "One conversion-focused page, mobile responsive design, contact form"
+        },
+        {
+          "package": "Starter Website",
+          "price": "$999–$1,499",
+          "includes": "Up to 5 pages, WordPress, responsive design, basic on-page SEO"
+        },
+        {
+          "package": "Business Website",
+          "price": "$1,999–$3,499",
+          "includes": "8–15 pages, custom design, integrations, speed optimization"
+        },
+        {
+          "package": "E-commerce Website",
+          "price": "$2,499–$5,999+",
+          "includes": "Product store, payment setup, shipping, essential store features"
+        },
+        {
+          "package": "Custom Web Application",
+          "price": "From $5,000",
+          "includes": "Custom functionality, dashboards, portals, APIs or databases"
+        },
+        {
+          "package": "Website Maintenance",
+          "price": "$99–$399/month",
+          "includes": "Updates, backups, security checks and allocated support"
+        }
+      ],
+      "SEO": [
+        {
+          "package": "Local SEO Essential",
+          "price": "From $499/month"
+        },
+        {
+          "package": "SEO Growth",
+          "price": "From $899/month"
+        },
+        {
+          "package": "SEO Authority",
+          "price": "From $1,499/month"
+        },
+        {
+          "package": "Competitive or Multi-Location SEO",
+          "price": "From $2,500/month"
+        },
+        {
+          "package": "One-Time SEO Audit",
+          "price": "$399–$899"
+        }
+      ],
+      "Google Business Profile": [
+        {
+          "package": "GBP Setup or Full Optimization",
+          "price": "$299–$499 one time"
+        },
+        {
+          "package": "Local Visibility",
+          "price": "$349/month"
+        },
+        {
+          "package": "Local Growth",
+          "price": "$599/month"
+        },
+        {
+          "package": "Multi-Location or Competitive Market",
+          "price": "From $899/month"
+        }
+      ],
+      "AI-Powered SEO, AIO, AEO and GEO": [
+        {
+          "package": "AI Visibility Audit",
+          "price": "$499–$899"
+        },
+        {
+          "package": "AI Visibility Essential",
+          "price": "$750/month"
+        },
+        {
+          "package": "AI Visibility Growth",
+          "price": "$1,250/month"
+        },
+        {
+          "package": "AI Visibility Authority",
+          "price": "From $2,000/month"
+        }
+      ],
+      "Social Media Management": [
+        {
+          "package": "Essential",
+          "price": "$599/month"
+        },
+        {
+          "package": "Growth",
+          "price": "$999/month"
+        },
+        {
+          "package": "Full Management",
+          "price": "$1,499–$2,499/month"
+        },
+        {
+          "package": "Paid social advertising",
+          "price": "Quoted separately"
+        }
+      ],
+      "Performance Marketing": [
+        {
+          "package": "Campaign setup",
+          "price": "$350–$750"
+        },
+        {
+          "package": "Basic management",
+          "price": "From $750/month"
+        },
+        {
+          "package": "Standard management",
+          "price": "$1,200/month or 15% of ad spend"
+        },
+        {
+          "package": "Advanced management",
+          "price": "Custom"
+        },
+        {
+          "package": "Advertising budget",
+          "price": "Paid directly by the client"
+        }
+      ],
+      "Graphic Design": [
+        {
+          "package": "Single social media design",
+          "price": "$35–$60"
+        },
+        {
+          "package": "10 social media designs",
+          "price": "$299–$449"
+        },
+        {
+          "package": "Logo design",
+          "price": "$299–$799"
+        },
+        {
+          "package": "Brand identity package",
+          "price": "$699–$1,500"
+        },
+        {
+          "package": "Presentation design",
+          "price": "From $250"
+        },
+        {
+          "package": "Monthly graphic design support",
+          "price": "From $699/month"
+        }
+      ],
+      "Video Editing": [
+        {
+          "package": "Short reel or social video",
+          "price": "$85–$150"
+        },
+        {
+          "package": "8 short videos monthly",
+          "price": "From $699"
+        },
+        {
+          "package": "16 short videos monthly",
+          "price": "From $1,299"
+        },
+        {
+          "package": "5–10 minute YouTube video",
+          "price": "$250–$600"
+        },
+        {
+          "package": "Motion graphics video",
+          "price": "From $300"
+        },
+        {
+          "package": "Long-form video repurposing",
+          "price": "Custom"
+        }
+      ],
+      "Combined Marketing Packages": [
+        {
+          "package": "Digital Launch",
+          "price": "From $1,499/month"
+        },
+        {
+          "package": "Business Growth",
+          "price": "From $2,499/month"
+        },
+        {
+          "package": "Full-Service Scale",
+          "price": "From $3,999/month"
+        }
+      ]
+    }
+  },
+  "portfolio": {
+    "web_development": "https://bmymarketer.com/web-development-portfolio/",
+    "logo_design": "https://bmymarketer.com/logo-design-portfolio/",
+    "social_media": "https://bmymarketer.com/social-media-portfolio/"
+  },
+  "pages": {
+    "home": "https://bmymarketer.com/",
+    "about": "https://bmymarketer.com/about/",
+    "services": "https://bmymarketer.com/services/",
+    "blogs": "https://bmymarketer.com/blogs/",
+    "ai_assistant": "https://bmymarketer.com/ai-assistant/",
+    "uae": "https://bmymarketer.com/uae/",
+    "contact": "https://bmymarketer.com/contact/"
+  },
+  "greetings": {
+    "welcome_message": "Hi! I’m the BMyMarketer Digital Growth Assistant. I can help you choose a service, estimate project pricing, review your marketing needs, or arrange a free consultation. What would you like help with today?",
+    "fallback_message": "I'm not fully confident I understood that correctly, so I don't want to guess. I specialize in questions about BMyMarketer's services, pricing, process and getting started - could you rephrase, or let me know which of those you're asking about? I've also noted your message so a team member can follow up if needed.",
+    "escalation_message": "I'll flag this to a member of our team so they can follow up with you directly. You can also reach us at info@bmymarketer.com or (210) 903-5954."
+  }
+}

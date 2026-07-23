@@ -1,0 +1,20 @@
+# Generated at runtime - never commit these
+database/*.db
+database/.keys/
+backups/*.db
+uploads/documents/*
+!uploads/documents/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Editor/OS
+.DS_Store
+.vscode/
+.idea/
+
+# In case unknown_query_logger.py is used
+unmatched_queries.txt

@@ -1,0 +1,43 @@
+# deploy/nginx.conf.example
+# Reverse proxy for BMY Marketer AI Assistant. waitress (wsgi.py) only
+# serves plain HTTP - nginx here handles TLS termination and forwards to
+# the app process on 127.0.0.1:5000.
+#
+# Copy to /etc/nginx/sites-available/bmy-chatbot, symlink into
+# sites-enabled, then run `certbot --nginx` (Let's Encrypt) to fill in the
+# ssl_certificate lines automatically, or point them at your own cert.
+
+server {
+    listen 80;
+    server_name chat.yourdomain.com;
+
+    # Redirect all HTTP to HTTPS once you have a cert - comment this out
+    # for the very first run before certbot has issued one.
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name chat.yourdomain.com;
+
+    ssl_certificate     /etc/letsencrypt/live/chat.yourdomain.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/chat.yourdomain.com/privkey.pem;
+
+    # Reasonable modern defaults
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    client_max_body_size 20M;  # allow the 15MB file-upload limit plus headroom
+
+    location / {
+        proxy_pass http://127.0.0.1:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Chat responses aren't huge, but keep timeouts generous for slow uploads
+        proxy_read_timeout 60s;
+        proxy_send_timeout 60s;
+    }
+}

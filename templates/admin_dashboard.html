@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard - BMY Marketer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css') }}" />
+</head>
+<body>
+  <div id="admin-app" class="admin-hidden">
+
+    <header class="admin-topbar">
+      <div class="admin-brand">BMyMarketer <span>Admin</span></div>
+      <div class="admin-topbar-right">
+        <div class="admin-notif-wrap">
+          <button id="admin-notif-bell" aria-label="Notifications">
+            🔔<span id="admin-notif-badge" class="admin-notif-badge admin-hidden">0</span>
+          </button>
+          <div id="admin-notif-dropdown" class="admin-notif-dropdown admin-hidden">
+            <div class="admin-notif-dropdown-header">
+              <span>Notifications</span>
+              <button id="admin-notif-mark-all">Mark all read</button>
+            </div>
+            <div id="admin-notif-list"></div>
+          </div>
+        </div>
+        <span id="admin-username-label"></span>
+        <button id="admin-logout-btn">Log out</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+
+      <!-- Stats -->
+      <section class="admin-stats-grid" id="admin-stats-grid">
+        <!-- filled by admin.js -->
+      </section>
+
+      <!-- Tabs -->
+      <nav class="admin-tabs">
+        <button class="admin-tab active" data-tab="conversations">Conversations</button>
+        <button class="admin-tab" data-tab="leads">Leads</button>
+        <button class="admin-tab" data-tab="appointments">Appointments</button>
+        <button class="admin-tab" data-tab="documents">Documents</button>
+        <button class="admin-tab admin-hidden" data-tab="backups" id="tab-btn-backups">Backups</button>
+        <button class="admin-tab admin-hidden" data-tab="team" id="tab-btn-team">Team</button>
+        <button class="admin-tab admin-hidden" data-tab="settings" id="tab-btn-settings">Settings</button>
+      </nav>
+
+      <!-- Conversations panel -->
+      <section id="tab-conversations" class="admin-tab-panel active">
+        <div class="admin-toolbar">
+          <input id="conv-search" type="text" placeholder="Search name, email, phone, company..." />
+          <select id="conv-status-filter">
+            <option value="">All statuses</option>
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+            <option value="escalated">Escalated</option>
+            <option value="resolved">Resolved</option>
+          </select>
+          <input id="conv-date-from" type="date" />
+          <input id="conv-date-to" type="date" />
+          <button id="conv-search-btn">Search</button>
+          <div class="admin-toolbar-spacer"></div>
+          <select id="conv-export-format">
+            <option value="csv">CSV</option>
+            <option value="xlsx">Excel</option>
+            <option value="pdf">PDF</option>
+            <option value="json">JSON</option>
+          </select>
+          <button id="conv-export-btn">Export</button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Company</th>
+              <th>Service</th>
+              <th>Status</th>
+              <th>Started</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="conv-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- Leads panel -->
+      <section id="tab-leads" class="admin-tab-panel">
+        <div class="admin-toolbar">
+          <input id="lead-search" type="text" placeholder="Search name, email, phone, company..." />
+          <select id="lead-status-filter">
+            <option value="">All statuses</option>
+            <option value="new">New</option>
+            <option value="contacted">Contacted</option>
+            <option value="proposal_sent">Proposal Sent</option>
+            <option value="won">Won</option>
+            <option value="lost">Lost</option>
+          </select>
+          <button id="lead-search-btn">Search</button>
+          <div class="admin-toolbar-spacer"></div>
+          <select id="lead-export-format">
+            <option value="csv">CSV</option>
+            <option value="xlsx">Excel</option>
+            <option value="pdf">PDF</option>
+            <option value="json">JSON</option>
+          </select>
+          <button id="lead-export-btn">Export</button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Service</th>
+              <th>Budget</th>
+              <th>Timeline</th>
+              <th>Status</th>
+              <th>Created</th>
+            </tr>
+          </thead>
+          <tbody id="lead-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- Appointments panel -->
+      <section id="tab-appointments" class="admin-tab-panel">
+        <div class="admin-toolbar">
+          <select id="appt-status-filter">
+            <option value="">All statuses</option>
+            <option value="requested">Requested</option>
+            <option value="confirmed">Confirmed</option>
+            <option value="completed">Completed</option>
+            <option value="cancelled">Cancelled</option>
+          </select>
+          <button id="appt-search-btn">Refresh</button>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Customer</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Requested Time</th>
+              <th>Notes</th>
+              <th>Status</th>
+              <th>Requested</th>
+            </tr>
+          </thead>
+          <tbody id="appt-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- Documents panel -->
+      <section id="tab-documents" class="admin-tab-panel">
+        <h3 class="admin-subheading">Knowledge Base Documents</h3>
+        <p class="admin-hint-text">
+          Upload PDFs (service brochures, pricing sheets, policies) and the
+          chatbot will search their text when it can't find an answer in the FAQ.
+        </p>
+        <div class="admin-toolbar">
+          <input type="file" id="kb-upload-input" accept=".pdf" />
+          <button id="kb-upload-btn">Upload</button>
+          <span id="kb-upload-status"></span>
+        </div>
+        <table class="admin-table">
+          <thead>
+            <tr><th>Filename</th><th>Status</th><th>Size</th><th>Uploaded</th><th></th></tr>
+          </thead>
+          <tbody id="kb-table-body"></tbody>
+        </table>
+
+        <h3 class="admin-subheading" style="margin-top:28px;">Customer-Uploaded Files</h3>
+        <table class="admin-table">
+          <thead>
+            <tr><th>Customer</th><th>Filename</th><th>Status</th><th>Uploaded</th></tr>
+          </thead>
+          <tbody id="customer-files-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- Backups panel -->
+      <section id="tab-backups" class="admin-tab-panel">
+        <div class="admin-toolbar">
+          <button id="backup-run-btn">Run Backup Now</button>
+          <span class="admin-backup-hint">Daily backups also run automatically in the background.</span>
+        </div>
+
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Filename</th>
+              <th>Created</th>
+              <th>Size</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="backup-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- Team panel (superadmin only) -->
+      <section id="tab-team" class="admin-tab-panel">
+        <h3 class="admin-subheading">Add Team Member</h3>
+        <form id="team-create-form" class="admin-toolbar">
+          <input type="text" id="team-username" placeholder="Username" required />
+          <input type="password" id="team-password" placeholder="Password (min 8 chars)" required />
+          <select id="team-role">
+            <option value="agent">Agent (view/reply/notes only)</option>
+            <option value="admin">Admin (+ manage leads/knowledge base)</option>
+            <option value="superadmin">Superadmin (+ backups, team management)</option>
+          </select>
+          <button type="submit">Create Account</button>
+        </form>
+        <div id="team-create-status" class="admin-hint-text"></div>
+
+        <table class="admin-table" style="margin-top:16px;">
+          <thead>
+            <tr><th>Username</th><th>Role</th><th>Created</th><th></th></tr>
+          </thead>
+          <tbody id="team-table-body"></tbody>
+        </table>
+      </section>
+
+      <!-- Settings panel (admin/superadmin only) -->
+      <section id="tab-settings" class="admin-tab-panel">
+        <h3 class="admin-subheading">Widget Color Theme</h3>
+        <p class="admin-hint-text">
+          Choose the color scheme customers see in the chat widget on your website.
+          Changes apply everywhere the widget is embedded, immediately.
+        </p>
+        <div id="theme-swatch-grid" class="admin-theme-grid"></div>
+        <div class="admin-toolbar" style="margin-top:16px;">
+          <button id="theme-reset-btn" class="admin-secondary-btn" type="button">↩ Reset to Default</button>
+          <span id="theme-status" class="admin-hint-text"></span>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Conversation detail modal -->
+  <div id="conv-modal" class="admin-modal-overlay admin-hidden">
+    <div class="admin-modal">
+      <div class="admin-modal-header">
+        <h2>Conversation</h2>
+        <button id="conv-modal-close">&times;</button>
+      </div>
+      <div class="admin-modal-body">
+        <p class="admin-modal-section-label">Client information</p>
+        <div id="conv-modal-customer" class="admin-modal-customer"></div>
+
+        <div class="admin-modal-row">
+          <label>Status:</label>
+          <select id="conv-modal-status">
+            <option value="open">Open</option>
+            <option value="closed">Closed</option>
+            <option value="escalated">Escalated</option>
+            <option value="resolved">Resolved</option>
+          </select>
+        </div>
+
+        <p class="admin-modal-section-label">Conversation</p>
+        <div id="conv-modal-messages" class="admin-modal-messages"></div>
+
+        <form id="conv-modal-reply-form" class="admin-modal-reply">
+          <input id="conv-modal-reply-input" type="text" placeholder="Reply as agent..." />
+          <button type="submit">Send</button>
+        </form>
+
+        <div class="admin-modal-notes">
+          <h3>Internal Notes</h3>
+          <div id="conv-modal-notes-list"></div>
+          <form id="conv-modal-note-form">
+            <input id="conv-modal-note-input" type="text" placeholder="Add a note (not visible to customer)..." />
+            <button type="submit">Add Note</button>
+          </form>
+        </div>
+
+        <button id="conv-modal-delete" class="admin-danger-btn">Delete Conversation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login gate is handled client-side by admin.js redirecting to /admin/login -->
+  <script src="{{ url_for('static', filename='js/admin.js') }}"></script>
+</body>
+</html>
